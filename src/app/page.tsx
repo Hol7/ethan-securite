@@ -258,7 +258,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl">
-              Gardiennage - Sécurité événementiel - Sécurité incendie - Sécurité numérique.<br/>
+              {/* Gardiennage - Sécurité événementiel - Sécurité incendie - Sécurité numérique.<br/> */}
               ETHAN SECURITÉ est une société privée spécialisée dans la protection des biens, 
               particuliers, professionnels ainsi que la protection des sites sensibles, 
               des chantiers et autres installations stratégiques
