@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Shield, Phone, Mail, MapPin, Users, Clock, CheckCircle, Star, Menu, X, Send, ChevronDown, ArrowRight, Eye, UserCheck, AlertTriangle, Building } from 'lucide-react';
+import Image from 'next/image';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -162,8 +163,9 @@ const Home = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center transform rotate-12">
-                  <Shield className="w-7 h-7 text-white transform -rotate-12" />
+                <div className="w-16 h-16 bg-gradient-to-br from-white to-white rounded-lg flex items-center justify-center transform rotate-12">
+                  {/* <Shield className="w-7 h-7 text-white transform -rotate-12" /> */}
+                  <Image src="/logo.svg" alt="Logo" width={80} height={80} />
                 </div>
               </div>
               <div>
@@ -459,7 +461,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
           <div className="inline-block text-red-600 font-bold text-lg mb-4 tracking-wider">
-                  ETHAN SECURITY
+                  ETHAN SECURITÉ
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
                   Qui sommes-nous ?<br />
@@ -675,7 +677,7 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-black">Demande de contact</h3>
               <button
                 onClick={() => setIsContactFormOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 hover:bg-gray-100 bg-red-600 rounded-full transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
