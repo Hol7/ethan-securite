@@ -388,8 +388,9 @@ const Home = () => {
                   <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold">POPULAIRE</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    {/* <Shield className="w-8 h-8 text-white" /> */}
+                    <Image src="/logo.svg" alt="Logo" width={80} height={80} />
                   </div>
                   <h3 className="text-2xl font-bold text-black mb-4">Gardiennage de Nuit</h3>
                   <div className="mb-6">
