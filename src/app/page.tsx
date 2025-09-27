@@ -799,8 +799,9 @@ const Home = () => {
             <div className="grid lg:grid-cols-4 gap-8 mb-8">
               <div>
                 <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
-                    <Shield className="w-7 h-7 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-white rounded-lg flex items-center justify-center">
+                    {/* <Shield className="w-7 h-7 text-white" /> */}
+                    <Image src="/logo.svg" alt="Logo" width={80} height={80} />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">ETHAN SECURITÉ</h3>
