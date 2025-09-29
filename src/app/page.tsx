@@ -18,6 +18,7 @@ const Home = () => {
     service: '',
     message: ''
   });
+  const [lightbox, setLightbox] = useState<{ type: 'image' | 'video'; src: string; poster?: string } | null>(null);
 
   const services = [
     {
@@ -41,6 +42,19 @@ const Home = () => {
       image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=500&h=400&fit=crop",
       features: ["Maître-chien", "Protection rapprochée", "Inspection magasin", "Intervention après alarme"]
     }
+  ];
+
+  // Galerie: placez vos fichiers dans le dossier public/ (ex: public/galerie1.jpg, public/video1.mp4)
+  const galleryItems: Array<
+    | { type: 'image'; src: string; alt: string }
+    | { type: 'video'; src: string; poster?: string; alt: string }
+  > = [
+    { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Intervention de sécurité 1' },
+    { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Surveillance de site' },
+    { type: 'video', src: '/video1.mp4', poster: '/video1-poster.jpg', alt: 'Présentation des services' },
+    { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Équipe en opération' },
+    { type: 'video', src: '/video2.mp4', poster: '/video2-poster.jpg', alt: 'Sécurité événementielle' },
+    { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Contrôle d\'accès' }
   ];
 
   const faqData = [
@@ -555,6 +569,117 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Galerie Section */}
+      <section id="galerie" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                Notre <span className="text-red-600">Galerie</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Découvrez nos images et vidéos illustrant nos services de sécurité
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {galleryItems.map((item, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setLightbox(item)}
+                  className="group relative block overflow-hidden rounded-xl bg-black focus:outline-none focus:ring-2 focus:ring-red-500"
+                >
+                  {/* Thumbnail */}
+                  {item.type === 'image' ? (
+                    <div className="relative h-56 md:h-64">
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    </div>
+                  ) : (
+                    <div className="relative h-56 md:h-64">
+                      {/* Poster si disponible sinon fond sombre */}
+                      {item.poster ? (
+                        <Image
+                          src={item.poster}
+                          alt={item.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover object-center opacity-90"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gray-900" />
+                      )}
+                      <div className="absolute inset-0 bg-black/30"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="w-7 h-7 ml-1"
+                          >
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 p-3 text-left">
+                    <span className="inline-block text-[11px] font-semibold tracking-wider uppercase px-2 py-1 rounded bg-black/60 text-white">
+                      {item.type === 'image' ? 'Image' : 'Vidéo'}
+                    </span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox Modal */}
+      {lightbox && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+          <div className="relative w-full max-w-5xl">
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute -top-10 right-0 text-white hover:text-red-400 p-2"
+              aria-label="Fermer"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <div className="bg-black rounded-xl overflow-hidden">
+              {lightbox.type === 'image' ? (
+                <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
+                  <Image
+                    src={lightbox.src}
+                    alt="Media"
+                    fill
+                    sizes="100vw"
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
+                  <video
+                    src={lightbox.src}
+                    poster={lightbox.poster}
+                    controls
+                    autoPlay
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
