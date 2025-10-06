@@ -53,7 +53,7 @@ const Home = () => {
       ]
     },
     {
-      title: "Pose Caméra + Configuration Mensuelle",
+      title: "Pose Caméra + Configuration",
       description: "Mise en place de caméras de surveillance avec configuration et suivi mensuel",
       icon: Camera,
       image: "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?w=500&h=400&fit=crop",
@@ -1040,7 +1040,7 @@ const Home = () => {
                 <div className="space-y-3 text-gray-400">
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2 text-red-500" />
-                    <span className="text-sm">L'immeuble Groupe Dólice, Avenue Paul Daumer, Quartier Mpilo, Brazzaville</span>
+                    <span className="text-sm">L'immeuble Groupe Dólice, Avenue Paul Daumer, Quartier Mpila, Brazzaville</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 mr-2 text-red-500" />
