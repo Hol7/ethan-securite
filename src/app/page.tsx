@@ -933,26 +933,26 @@ const Home = () => {
 
               <div>
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-3">Nom complet</label>
+                <label className="block text-sm font-semibold text-black mb-3">Nom complet</label>
                 <input
                   type="text"
                   name="nom"
                   value={formData.nom}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-3">Email</label>
+                <label className="block text-sm font-semibold text-black mb-3">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 text-blackrounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                 />
               </div>
               
@@ -963,7 +963,7 @@ const Home = () => {
                   name="telephone"
                   value={formData.telephone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                 />
               </div>
               
@@ -973,7 +973,7 @@ const Home = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                 >
                   <option value="">Sélectionnez un service</option>
                   <option value="gardiennage">Gardiennage Statique</option>
@@ -990,7 +990,7 @@ const Home = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors resize-none"
                 ></textarea>
               </div>
               
