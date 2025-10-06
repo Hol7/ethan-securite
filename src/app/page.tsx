@@ -515,7 +515,7 @@ const Home = () => {
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Camera className="w-8 h-8 text-red-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-black mb-4">Pose Caméra + Configuration Mensuelle</h3>
+                  <h3 className="text-2xl font-bold text-black mb-4">Pose Caméra + Configuration</h3>
                   <div className="mb-6">
                     <div className="text-3xl font-bold text-red-600 mb-2">185.000 FCFA</div>
                     <p className="text-gray-600">NB: Caméra offerte</p>
@@ -889,7 +889,7 @@ const Home = () => {
                 <p className="text-gray-600">
                   L'immeuble Groupe Dólice<br />
                   Avenue Paul Daumer<br />
-                  Quartier Mpilo<br />
+                  Quartier Mpila<br />
                   Brazzaville, Congo
                 </p>
               </div>
