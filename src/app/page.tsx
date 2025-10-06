@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Shield, Phone, Mail, MapPin, Users, Clock, CheckCircle, Star, Menu, X, Send, ChevronDown, ArrowRight, Eye, UserCheck, AlertTriangle, Building } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Users, Clock, CheckCircle, Star, Menu, X, Send, ChevronDown, ArrowRight, Eye, UserCheck, AlertTriangle, Building, Camera } from 'lucide-react';
 import Image from 'next/image';
 
 const Home = () => {
@@ -41,6 +41,36 @@ const Home = () => {
       icon: Shield,
       image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=500&h=400&fit=crop",
       features: ["Maître-chien", "Protection rapprochée", "Inspection magasin", "Intervention après alarme"]
+    },
+    {
+      title: "Pose de Détecteur de Fumée",
+      description: "Installation professionnelle de détecteurs de fumée pour une sécurité incendie renforcée",
+      icon: AlertTriangle,
+      image: "https://images.unsplash.com/photo-1556910096-6f5e72db6809?w=500&h=400&fit=crop",
+      features: [
+        "NB: Détecteur de fumée offert",
+        "Prix: 35.000 FCFA"
+      ]
+    },
+    {
+      title: "Pose Caméra + Configuration Mensuelle",
+      description: "Mise en place de caméras de surveillance avec configuration et suivi mensuel",
+      icon: Camera,
+      image: "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?w=500&h=400&fit=crop",
+      features: [
+        "NB: Caméra offerte",
+        "Prix: 185.000 FCFA"
+      ]
+    },
+    {
+      title: "Entretien Mensuel",
+      description: "Maintenance et contrôle réguliers de vos dispositifs de sécurité",
+      icon: Clock,
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&h=400&fit=crop",
+      features: [
+        "NB: Vous bénéficiez de 2 mois d'entretien gratuite",
+        "Prix: 10.000 FCFA"
+      ]
     }
   ];
 
@@ -180,6 +210,7 @@ const Home = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-white to-white rounded-lg flex items-center justify-center transform rotate-12">
                   {/* <Shield className="w-7 h-7 text-white transform -rotate-12" /> */}
                   <Image src="/logo.svg" alt="Logo" width={80} height={80} />
+
                 </div>
               </div>
               <div>
@@ -454,6 +485,78 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              {/* Pose Détecteur de Fumée */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-100 hover:border-red-200 transition-colors">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <AlertTriangle className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-4">Pose de Détecteur de Fumée</h3>
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-red-600 mb-2">35.000 FCFA</div>
+                    <p className="text-gray-600">NB: Détecteur de fumée offert</p>
+                  </div>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Installation professionnelle</span>
+                    </div>
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Tests et vérifications</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pose Caméra + Configuration Mensuelle */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-100 hover:border-red-200 transition-colors">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Camera className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-4">Pose Caméra + Configuration Mensuelle</h3>
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-red-600 mb-2">185.000 FCFA</div>
+                    <p className="text-gray-600">NB: Caméra offerte</p>
+                  </div>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Installation et configuration</span>
+                    </div>
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Suivi mensuel</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Entretien Mensuel */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-100 hover:border-red-200 transition-colors">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Clock className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-4">Entretien Mensuel</h3>
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-red-600 mb-2">10.000 FCFA</div>
+                    <p className="text-gray-600">NB: 2 mois d'entretien gratuits</p>
+                  </div>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Maintenance régulière</span>
+                    </div>
+                    <div className="flex items-center text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
+                      <span>Contrôles de performance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <div className="text-center mt-12">
