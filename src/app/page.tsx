@@ -216,6 +216,7 @@ const Home = () => {
               <div>
                 <h1 className="text-2xl font-bold text-white">ETHAN</h1>
                 <p className="text-sm text-red-500 font-semibold tracking-wider">SECURITÉ</p>
+                <p className="text-sm text-white font-semibold tracking-wider">Notre Engagement Votre Sécurité</p>
               </div>
             </div>
 
@@ -1048,7 +1049,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">ETHAN SECURITÉ</h3>
-                    <p className="text-sm text-gray-400">SRL</p>
+                    <p className="text-sm text-red-400">Notre Engagement Votre Sécurité</p>
                   </div>
                 </div>
                 <div className="space-y-3 text-gray-400">
