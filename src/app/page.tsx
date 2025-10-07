@@ -654,6 +654,20 @@ const Home = () => {
                       pour vous offrir des services complets et de qualité.
                     </p>
                   </div>
+                  {/* Mini section: Nos partenaires (text placeholders) */}
+                  <div className="mb-6">
+                    <h5 className="font-semibold text-black mb-3">Nos partenaires :</h5>
+                    <div className="flex flex-wrap gap-3">
+                      {['Ethan Ascenseur', 'Ethan money', 'Taxiforfait', 'EE industry equipment'].map((name) => (
+                        <span
+                          key={name}
+                          className="px-3 py-1 rounded-full bg-green-400 text-white font-bold text-xl"
+                        >
+                          {name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   
                   <p className="text-gray-600 mb-6">
                     Notre entreprise se distingue par sa capacité à répondre rapidement aux besoins 
