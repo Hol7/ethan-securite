@@ -79,12 +79,13 @@ const Home = () => {
     | { type: 'image'; src: string; alt: string }
     | { type: 'video'; src: string; poster?: string; alt: string }
   > = [
-    { type: 'image', src: '/image1.jpeg', alt: 'Intervention de sécurité 1' },
+    { type: 'image', src: '/image1.jpg', alt: 'Intervention de sécurité 1' },
+        { type: 'video', src: '/video1.mp4', poster: '/video1-poster.jpg', alt: 'Présentation des services' },
     { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Surveillance de site' },
-    { type: 'video', src: '/video1.mp4', poster: '/video1-poster.jpg', alt: 'Présentation des services' },
-    { type: 'image', src: '/image2.jpeg', alt: 'Équipe en opération' },
+
+    { type: 'image', src: '/image2.jpg', alt: 'Équipe en opération' },
     { type: 'video', src: '/video2.mp4', poster: '/video2-poster.jpg', alt: 'Sécurité événementielle' },
-    { type: 'image', src: '/imageEthansecurite.jpeg', alt: 'Contrôle d\'accès' }
+    { type: 'image', src: '/imageEthansecurite.jpg', alt: 'Contrôle d\'accès' }
   ];
 
   const faqData = [
@@ -710,7 +711,7 @@ const Home = () => {
                 >
                   {/* Thumbnail */}
                   {item.type === 'image' ? (
-                    <div className="relative h-56 md:h-64">
+                    <div className="relative h-96 md:h-96">
                       <Image
                         src={item.src}
                         alt={item.alt}
