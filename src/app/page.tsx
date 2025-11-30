@@ -903,11 +903,12 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-bold text-black mb-2">Adresse</h3>
                 <p className="text-gray-600">
-                  L'immeuble Groupe Dólice<br />
-                  Avenue Paul Daumer<br />
-                  Quartier Mpila<br />
+                  L'immeuble Groupe Délice
+                  Avenue Paul Daumer
+                  Quartier Mpila
                   Brazzaville, Congo
                 </p>
+                <p>38 avenue Général Alfred Raoul, réf Marché Mpita arrondissement n°1 Lumumba,Pointe noire</p>
               </div>
             </div>
           </div>
@@ -1056,7 +1057,11 @@ const Home = () => {
                 <div className="space-y-3 text-gray-400">
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2 text-red-500" />
-                    <span className="text-sm">L'immeuble Groupe Dólice, Avenue Paul Daumer, Quartier Mpila, Brazzaville</span>
+                    <span className="text-sm">L'immeuble Groupe Délice, Avenue Paul Daumer, Quartier Mpila, Brazzaville</span>
+                  </div>
+                    <div className="flex items-center">
+                    <MapPin className="w-4 h-4 mr-2 text-red-500" />
+                    <span className="text-sm">38 avenue Général Alfred Raoul, réf Marché Mpita arrondissement n°1 Lumumba,pointe noire</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 mr-2 text-red-500" />
